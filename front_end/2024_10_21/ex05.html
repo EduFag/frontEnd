@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .display-none {
+        display: none;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button {
+        width: 23%;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button">Mostrar/ocultar</button>
+    <img
+      src="https://artpoin.com/wp-content/uploads/2023/07/artpoin-personagens-naruto-cute5.png"
+      alt=""
+      width="300px"
+      id="img"
+    />
+
+    <script>
+      const button = document.getElementById("button");
+      let oculto = false;
+      button.onclick = () => {
+        const img = document.getElementById("img");
+        if (!oculto) {
+          img.classList.add("display-none");
+        } else {
+          img.classList.remove("display-none");
+        }
+        oculto = !oculto
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="contador-button">Contador</button>
+    <p id="contador"></p>
+
+    <script>
+        const contadorButton = document.getElementById('contador-button');
+        const contador = document.getElementById('contador')
+        let count = 0
+        contadorButton.onclick = () => {
+            count++
+            contador.innerHTML = ''
+            contador.innerHTML = count
+        }
+    </script>
+    
+</body>
+</html>

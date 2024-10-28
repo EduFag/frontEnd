@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="text">
+      No coração da floresta, uma pequena clareira se iluminava com a luz suave
+      do sol poente. As folhas dançavam ao vento, criando uma sinfonia
+      sussurrante, enquanto um cervo tímido espreitava entre as árvores, atento
+      aos sons ao redor. A tranquilidade do lugar era quebrada apenas pelo canto
+      distante de um pássaro, como se estivesse contando segredos antigos. Era
+      um momento de pura harmonia, onde a natureza revelava sua beleza serena.
+    </p>
+    <button id="button">proximo</button>
+    <script>
+      const texto = document.getElementById("button");
+      texto.onclick = () => {
+        const text = document.getElementById("text");
+        text.innerHTML =
+          "Em uma cidade onde os relógios nunca marcavam a mesma hora, um artista vagava pelas ruas em busca de inspiração. Suas telas, cheias de cores vibrantes, capturavam o espírito efêmero do lugar. As pessoas passavam, algumas parando para admirar, outras apenas seguindo em frente, mas cada uma deixava uma parte de si na arte. Num dia ensolarado, uma brisa suave trouxe consigo a risada de uma criança, e foi essa melodia que o artista decidiu eternizar, transformando um momento simples em uma explosão de felicidade e vida.";
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genius</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main {
+            width: 800px;
+            height: 800px;
+            border: 1px solid black;
+        }
+
+        .main .top {
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main .bottom {
+            height: 50%;
+            width: 100%;
+            display: flex;
+        }
+
+        .button {
+            width: 50%;
+            height: 100%;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: 0.5s linear;
+        }
+
+        #verde {
+            background-color: green;
+        }
+
+        #vermelho {
+            background-color: red;
+        }
+
+        #amarelo {
+            background-color: yellow;
+        }
+
+        #azul {
+            background-color: blue;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main">
+        <div class="top">
+            <div class="button" id="verde"></div>
+            <div class="button" id="vermelho"></div>
+        </div>
+        <div class="bottom">
+            <div class="button" id="amarelo"></div>
+            <div class="button" id="azul"></div>
+        </div> 
+    </div>
+
+    <button id="start">começar</button>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
