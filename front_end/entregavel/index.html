@@ -6,79 +6,140 @@
     <title>Genius</title>
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Spice&display=swap');
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            width: 100vw;
+            display: flex;
             height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-color: #2f2e30;
+        }
+
+        main {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            margin-right: 100px;
+        }
+
+        .centro {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: black;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .main {
-            width: 800px;
-            height: 800px;
-            border: 1px solid black;
-        }
 
-        .main .top {
-            height: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
+        .centro img {
+            width: 70%;
+            height: auto;
         }
-
-        .main .bottom {
-            height: 50%;
-            width: 100%;
-            display: flex;
-        }
-
         .button {
             width: 50%;
-            height: 100%;
-            border: 1px solid black;
+            height: 50%;
             cursor: pointer;
-            transition: 0.5s linear;
+            transition: 0.3s;
+            border: 5px solid black;
         }
-
         #verde {
-            background-color: green;
+            background-image: linear-gradient(90deg, #61fac2 0%, #68f71c 100%);
+            border-radius: 100% 0 0 0;
         }
-
         #vermelho {
-            background-color: red;
+            background-image: linear-gradient(225deg, #ffd0d0 0%, #f71c1c 100%);
+            border-radius: 0 100% 0 0;
         }
-
         #amarelo {
-            background-color: yellow;
+            background-image: linear-gradient(45deg, #fffbd0 0%, #f7ed1c 100%);
+            border-radius: 0 0 0 100%; 
+        }
+        #azul {
+            background-image: linear-gradient(135deg, #d0ddff 0%, #1c3af7 100%);
+            border-radius: 0 0 100% 0;
         }
 
-        #azul {
-            background-color: blue;
+        .menu {
+            width: 250px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
+
+        .menu h1 {
+            font-family: "Bungee Spice", sans-serif;
+            font-size: 5em;
+        }
+
+        #start {
+            font-family: "Bungee Inline", sans-serif;
+            border: 1px, solid white;
+            background-color: #2f2e30;
+            color: white;
+            padding: 10px 20px;
+            font-size: 2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        #score {
+            font-family: "Bungee Inline", sans-serif;
+            color: #fffbd0;
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        #start:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+
+
     </style>
+
 
 </head>
 <body>
+    <audio id="som" src="som.mp3"></audio>
+    <audio id="gameover"src="gameover.mp3"></audio>
 
-    <div class="main">
-        <div class="top">
-            <div class="button" id="verde"></div>
-            <div class="button" id="vermelho"></div>
+    <main>
+        <div class="button" id="verde"></div>
+        <div class="button" id="vermelho"></div>
+        <div class="centro">
+            <img src="brain.png" alt="cerebro">
         </div>
-        <div class="bottom">
-            <div class="button" id="amarelo"></div>
-            <div class="button" id="azul"></div>
-        </div> 
+        <div class="button" id="amarelo"></div>
+        <div class="button" id="azul"></div>
+    </main>
+    
+    <div class="menu">
+        <h1>Genius</h1>
+        <button id="start">Começar</button>
+        <div id="score" class="score">Nível: 0</div>
     </div>
 
-    <button id="start">começar</button>
-
-    <script src="script.js"></script>
+    <script src="main.js"></script>
     
 </body>
 </html>
