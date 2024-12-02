@@ -1,4 +1,5 @@
-''' import { useState } from "react";
+```
+import { useState } from "react";
 
 export default function App() {
   const [tarefas, setTarefas] = useState([] as string[]);
@@ -36,4 +37,5 @@ export default function App() {
       <ul>{tarefasList}</ul>
     </div>
   );
-} '''
+}
+```
